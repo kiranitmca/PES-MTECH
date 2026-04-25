@@ -43,4 +43,30 @@
 # print('The subject name is: ' + sub)
 
 #print(20,30,40,50,'hello',sep=':')  # sep is used to separate the values with a specific character or string. by default, it is a space.
-print(7**2)
+#print(7**2)
+
+# def mf1(p0,p1):
+#         r= p0+p1
+#         return r
+# x=mf1(10,20)
+# print(x)
+
+# Strings are immutable in python and it behaves as constants.
+#ms1='abcdefghijkl'
+# print(ms1[0])
+# print(ms1[5])
+# print(ms1[-1])
+# print(ms1[7:10])
+# print(ms1[-8:-2])
+# print(ms1[:7])
+
+# concatination and membership operators
+
+ms2='mnopqrstuvwxyz'
+# print(ms1+ms2)
+# print('a' in ms1)
+# print('z' not in ms2)
+#print(dir(str))
+help(str.replace)
+
+
