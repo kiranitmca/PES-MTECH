@@ -41,3 +41,6 @@
 
 # sub = input('Enter the subject name: ')
 # print('The subject name is: ' + sub)
+
+#print(20,30,40,50,'hello',sep=':')  # sep is used to separate the values with a specific character or string. by default, it is a space.
+print(7**2)
