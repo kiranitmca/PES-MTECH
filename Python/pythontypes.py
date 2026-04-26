@@ -94,5 +94,26 @@ def objcheck(obj):
 # print(m1)
 # print(m2)
 
-mt1 = (10+11,)
-print(type(mt1))
+# Tuple is immutable sequence type in python
+
+# mt1 = (10+11,)
+# print(type(mt1))
+
+
+# Dictionary is a collection of key-value pairs in python
+
+md1 = {'Bank':'SBI','Branch':'MGR','country':'India'}
+
+# print(type(md1))
+# print(md1['Bank'])
+# md1['Bank']='HDFC'
+# print(md1)
+# print(md1.get('Branch'))
+k=md1.keys()
+print(k)
+
+klist= list(md1.keys())
+print(klist)
+
+ilist= list(md1.items())
+print(ilist)
