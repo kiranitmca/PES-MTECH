@@ -99,11 +99,21 @@ ms1='king RING sing'
 
 # print(' '.join(ms3))
 
-sub ='Maths'
-num = 58
-avg = 87.65
+# sub ='Maths'
+# num = 58
+# avg = 87.65
 
-ns1='The subject is {} and the number is {} and the average is {}'.format(sub,num,avg)
-print(ns1)
+# ns1='The subject is {:s} and the number is {:d} and the average is {:.2f}'.format(sub,num,avg)
+# print(ns1)
 
+# # replacement index constraint 
+# ns2='The subject is {1} and the number is {0} and the average is {2}'.format(sub,num,avg)
+# print(ns2)
 
+# #string formatting with f-string
+
+# ns3 = f'The subject is {sub} and the number is {num} and the average is {avg:.2f}'
+# print(ns3)
+
+print('nse\nbse\tmumbai')
+print('abcde\rpqs')
