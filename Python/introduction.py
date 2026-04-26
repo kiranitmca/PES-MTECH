@@ -62,11 +62,48 @@
 
 # concatination and membership operators
 
-ms2='mnopqrstuvwxyz'
+#ms2='mnopqrstuvwxyz'
 # print(ms1+ms2)
 # print('a' in ms1)
 # print('z' not in ms2)
 #print(dir(str))
-help(str.replace)
+#help(str.replace)
+
+ms1='king RING sing'
+
+# print(ms1)
+# print(ms1.replace('ng','ms'))
+# print(ms1.replace('g','*').replace('G','#'))
+# Find methods that starts with 'is' and 'endswith' in string class
+
+# ind= ms1.find('g')
+# print(ind)
+
+# ind1= ms1.rfind('g')
+# print(ind1)
+
+
+# print(ms1.lower())
+# print(ms1.count('g'))
+# print(ms1.upper())
+# print(ms1.capitalize())
+# print(ms1.swapcase())
+
+# print('2023S'.isdigit())
+
+#print(ms1.split())
+
+# ms2= 'world health org_geneva'
+# print(ms2.split('_'))
+# ms3 =['National','Stock','Exchange','Mumbai','City']
+
+# print(' '.join(ms3))
+
+sub ='Maths'
+num = 58
+avg = 87.65
+
+ns1='The subject is {} and the number is {} and the average is {}'.format(sub,num,avg)
+print(ns1)
 
 
