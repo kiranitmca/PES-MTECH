@@ -43,4 +43,77 @@
 # print('The subject name is: ' + sub)
 
 #print(20,30,40,50,'hello',sep=':')  # sep is used to separate the values with a specific character or string. by default, it is a space.
-print(7**2)
+#print(7**2)
+
+# def mf1(p0,p1):
+#         r= p0+p1
+#         return r
+# x=mf1(10,20)
+# print(x)
+
+# Strings are immutable in python and it behaves as constants.
+#ms1='abcdefghijkl'
+# print(ms1[0])
+# print(ms1[5])
+# print(ms1[-1])
+# print(ms1[7:10])
+# print(ms1[-8:-2])
+# print(ms1[:7])
+
+# concatination and membership operators
+
+#ms2='mnopqrstuvwxyz'
+# print(ms1+ms2)
+# print('a' in ms1)
+# print('z' not in ms2)
+#print(dir(str))
+#help(str.replace)
+
+ms1='king RING sing'
+
+# print(ms1)
+# print(ms1.replace('ng','ms'))
+# print(ms1.replace('g','*').replace('G','#'))
+# Find methods that starts with 'is' and 'endswith' in string class
+
+# ind= ms1.find('g')
+# print(ind)
+
+# ind1= ms1.rfind('g')
+# print(ind1)
+
+
+# print(ms1.lower())
+# print(ms1.count('g'))
+# print(ms1.upper())
+# print(ms1.capitalize())
+# print(ms1.swapcase())
+
+# print('2023S'.isdigit())
+
+#print(ms1.split())
+
+# ms2= 'world health org_geneva'
+# print(ms2.split('_'))
+# ms3 =['National','Stock','Exchange','Mumbai','City']
+
+# print(' '.join(ms3))
+
+# sub ='Maths'
+# num = 58
+# avg = 87.65
+
+# ns1='The subject is {:s} and the number is {:d} and the average is {:.2f}'.format(sub,num,avg)
+# print(ns1)
+
+# # replacement index constraint 
+# ns2='The subject is {1} and the number is {0} and the average is {2}'.format(sub,num,avg)
+# print(ns2)
+
+# #string formatting with f-string
+
+# ns3 = f'The subject is {sub} and the number is {num} and the average is {avg:.2f}'
+# print(ns3)
+
+print('nse\nbse\tmumbai')
+print('abcde\rpqs')
