@@ -209,7 +209,35 @@ vlist= ['SBI','Whitefield','India','Bangalore']
 # print("Bye")
 
 
-l = range(10)
-for i in set(l):
-    if i%2==0:
-        print(f"Even Number: {i} ")
+# l = range(10)
+# for i in set(l):
+#     if i%2==0:
+#         print(f"Even Number: {i} ")
+
+# a =(10,20,30,40,50)
+# print(a)
+
+
+# lcount1=9
+# while (lcount1>0):
+    
+#     if lcount1==6:
+#         lcount1-=1
+#         continue
+#     print(lcount1)
+#     lcount1-=1
+# print("Bye")
+
+# Write a function to take an number and check if it is even or not 
+
+def evencheck(num):
+    if (num%2) == 0:
+        return 'Even'
+    else:
+        return 'Odd'
+
+num=20
+print(evencheck(num))
+
+a = 10,202,30,40
+print(a)
