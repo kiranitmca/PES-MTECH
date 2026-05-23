@@ -1,5 +1,6 @@
 import scipy
 from scipy import stats
+import numpy as np
 
 # print("SciPy version:", scipy.__version__)
 
@@ -34,9 +35,36 @@ from scipy import stats
 
 # print(stats.t.interval(0.9,n-1,xbar,scale))
 
-import numpy as np
-sample=[1,2,3,4,5]
-print(np.mean(sample))  
-print(np.std(sample,ddof=1))
+# import numpy as np
+# sample=[1,2,3,4,5]
+# print(np.mean(sample))  
+# print(np.std(sample,ddof=1))
+
+# x_bar= 78
+# mu = 75
+# sigma = 6
+# n = 16
+
+# standrd_error = sigma/pow(n,0.5)
+# z_score = (x_bar - mu)/standrd_error
+# p_value = stats.t.sf(z_score,n-1)*100
+
+# print("Standard Error:", standrd_error)
+# print("Z-Score:", z_score)
+# print("P-Value:", p_value)
 
 
+x_bar= 2.2
+mu = 2
+sd = 0.5
+n=50
+alpha = 0.05
+ts = (x_bar - mu)/(sd/pow(n,0.5))
+p_value = stats.t.sf(ts,n-1)*100
+print("Test Statistic:", ts)
+print("P-Value:", p_value)
+print("Alpha:", alpha)
+if p_value < alpha:
+    print("Reject the null hypothesis")
+else:
+    print("Fail to reject the null hypothesis")
