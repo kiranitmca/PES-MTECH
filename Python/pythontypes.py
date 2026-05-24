@@ -99,7 +99,7 @@ def objcheck(obj):
 # mt1 = (10+11,)
 # print(type(mt1))
 
-
+# May-9
 # Dictionary is a collection of key-value pairs in python
 
 md1 = {'Bank':'SBI','Branch':'Whitefield','country':'India'}
@@ -230,14 +230,175 @@ vlist= ['SBI','Whitefield','India','Bangalore']
 
 # Write a function to take an number and check if it is even or not 
 
-def evencheck(num):
-    if (num%2) == 0:
-        return 'Even'
+# def evencheck(num):
+#     if (num%2) == 0:
+#         return 'Even'
+#     else:
+#         return 'Odd'
+
+# num=20
+# print(evencheck(num))
+
+# a = 10,202,30,40
+# print(a)
+
+# May -10 
+# Rule-1 While defining the function 
+# the required param must be specified before default param
+#Rule-2  while calling a function ,positional mapping by python 
+# should be done and then programmers parameter-based mapping
+
+# Rule-3  A variable tuple can be populated by positional mapping 
+# Rule-4  Avariable dict in the function definition,
+# should be specified last
+
+
+# def mf15(r1,r2,*args,d1=111,d2=3333,**kwargs):
+#     print(r1,r2)
+#     print(d1,d2)
+#     print(args)
+#     print(kwargs)
+
+# mf15(10,20,30,40,50,'Hello',v=20,v2=30)
+
+
+# lambda function
+
+# def isEven1(num):
+#     return (num%2)==0
+
+# print(isEven1(2))
+
+# iseven2=lambda n1 : (n1%2)==0
+# print(iseven2(22))
+
+# isnum = lambda n2 : 'even' if (n2%2) == 0 else 'Odd'
+
+# print(isnum(30))
+
+# isnum1 = lambda n3 : n3**2 if (n3%2) == 0 else n3**3
+
+# print(isnum1(20))
+
+# istemp = int(input("Enter temp:"))
+
+# temp = lambda istemp : 'Hot' if istemp > 99 else 'cold' if istemp < 60 else 'Normal'
+# print(temp(istemp))
+
+# DIY : list.sort with key method code it using anomynous function objects
+
+
+# mlist = [1,2,3,4,5]
+# cmobj = map(lambda m: m*100 ,mlist) # inline, created,consumed,destroyed
+# print(list(cmobj))
+
+# nlist=[10,20,13,16,19,22,28]
+
+# fobj=filter(lambda n1: (n1%2) == 0 ,nlist)
+# print(list(fobj))
+
+# fobj1=filter(lambda char : char.lower() in 'aeiou' ,'pythonpdsDSAIml')
+# print(list(fobj1))
+
+# import functools
+# nlist=[10,20,13,16,19,22,28]
+
+# robj=functools.reduce(lambda n1,n2 : n1 if n1 > n2 else n2 ,nlist)
+# print(robj)
+
+# Grammer 
+#1  
+'''
+final_list = [<2. expression > <1. for loop >]
+
+'''
+
+
+# l = [2,4,5,6,7,9]
+# lobj = [ x**2 for x in l]
+# print(lobj)
+
+# olist=[]
+
+# for i in l:
+#     olist.append(i**2)
+# print(olist)
+
+
+l1 = [2,4,5,6,7,9]
+num2=[]
+
+# for n in l1:
+#     if n%2 == 0:
+#         num2.append(n**2)
+#     else:
+#         num2.append(n**3)
+# print(num2)
+
+
+# olist = [n**2 if (n%2) == 0 else n**3 for n in l1 ]
+# print(olist)
+
+# ilist =[1,2,4,5,7,9,10,12]
+# olist1=[]
+# for n in ilist:
+#     if n%2 == 0:
+#         olist1.append(n**2)
+# print(olist1)
+
+#2 
+
+'''
+final_list = [<3.expression> <1. for loop> <2.gating_condition>]
+
+'''
+
+# Grammer
+# final_list =[<3. expression> <1. for_loop> <2. for_loop_1>]
+
+
+
+# olist2=[]
+
+# for n in range(1,30):
+#     if n%3 == 0:
+#         if n%2 ==0:
+#             olist2.append([n,n**2])
+#         else:
+#             olist2.append([n,n**3])
+# print(olist2)
+
+# olist3=[[n,n**2] if n%2==0 else [n,n**3]for n in range(1,30) if n%3==0]
+# print(olist3)
+
+# sqdict = {n:n**2 for n in range(1,10)}
+# print(sqdict)
+
+
+# mlist =[]
+# for n in [2,3,4,5]:
+#     olist = []
+#     for m in [1,2,3,4,5]:
+#         olist.append(n*m)
+#     mlist.append(olist)
+
+
+# print(mlist)
+
+
+# olist=[[n*m for m in [1,2,3,4,5]] for n in [2,3,4,5]]
+# print(olist)
+
+
+# Recursion
+
+def fact(n):
+    if not isinstance(n,int):
+        raise ValueError("Input must be an integer")
+    if n < 0:
+        raise ValueError("Input must be a non-negative integer")
+    if n == 0:
+        return 1
     else:
-        return 'Odd'
-
-num=20
-print(evencheck(num))
-
-a = 10,202,30,40
-print(a)
+        return n*fact(n-1)
+print(fact(-5))

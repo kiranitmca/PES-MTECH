@@ -1,0 +1,12 @@
+Numpy is a N dimensional array data processing 
+
+numpy package holds randowm module which has randint to generate the matrix by specifying the low ,high and size values.
+
+ax2+bx+c
+
+ravel()
+flatten()
+ones()
+numpy arrays are mutable
+
+Series
