@@ -54,17 +54,45 @@ import numpy as np
 # print("P-Value:", p_value)
 
 
-x_bar= 2.2
-mu = 2
-sd = 0.5
-n=50
-alpha = 0.05
-ts = (x_bar - mu)/(sd/pow(n,0.5))
-p_value = stats.t.sf(ts,n-1)*100
-print("Test Statistic:", ts)
-print("P-Value:", p_value)
-print("Alpha:", alpha)
-if p_value < alpha:
-    print("Reject the null hypothesis")
-else:
-    print("Fail to reject the null hypothesis")
+# x_bar= 2.2
+# mu = 2
+# sd = 0.5
+# n=50
+# alpha = 0.05
+# ts = (x_bar - mu)/(sd/pow(n,0.5))
+# p_value = stats.t.sf(ts,n-1)*100
+# print("Test Statistic:", ts)
+# print("P-Value:", p_value)
+# print("Alpha:", alpha)
+# if p_value < alpha:
+#     print("Reject the null hypothesis")
+# else:
+#     print("Fail to reject the null hypothesis")
+
+
+# p_value = stats.t.cdf(-1.667,27)*2
+# print(p_value*100)
+
+sample1 = [10,11,12,13,19,18,23]
+sample2=[20,35,22,11,12,10,23,38,42]
+
+print(stats.ttest_ind(sample1,sample2,alternative="two-sided"))
+
+# two-sided ,greatet,less
+
+
+sample = [9,3,-7,-4,0,-11,1,8,3]
+
+n= len(sample)
+sample_mean =np.mean(sample)
+std = np.std(sample,ddof=1)
+ts = sample_mean/(std/pow(n,0.5))
+print(ts)
+
+print(stats.t.sf(ts,n-1)*100)
+
+before =[33,32,38,45,37,47,48,41,45]
+after =[42,35,31,41,37,36,49,49,48]
+
+print(stats.ttest_rel(after,before,alternative="greater"))
+
