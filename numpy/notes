@@ -8,3 +8,5 @@ ravel()
 flatten()
 ones()
 numpy arrays are mutable
+
+Series
