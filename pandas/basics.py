@@ -36,4 +36,29 @@ df2 = pd.DataFrame(md2,index=row_lables)
 #print(df2)
 
 df_csv = pd.read_csv(r'D:\PES\PES-MTECH\Data\lds1.csv')
-print(df_csv)
+#print(df_csv.head())
+
+#print(pd.__version__)
+
+#df_csv.info()
+#print(df_csv.describe(include='object'))
+#print(df_csv.head())
+#df_csv.to_csv(r'D:\PES\PES-MTECH\Data\output_lds1.csv', index=True)
+
+# df_csv_read = pd.read_csv(r'D:\PES\PES-MTECH\Data\output_lds1.csv',index_col=0)
+# print(df_csv_read.head())
+
+# DIY zipfile , xml module to read and write data in zip and xml formats respectively.
+
+
+# Access data from dataframe
+'''
+Direct access 
+integer location based access
+label based access
+
+df_csv['column_name'] or df_csv.column_name # direct access
+df_csv[['column1','column2']] # direct access multiple columns
+df_csv['starting_row_index': 'ending_row_index', 'step'] # direct access rows
+'''
+print(df_csv[['Rev','Exp','Vol']])
