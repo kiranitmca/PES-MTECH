@@ -146,9 +146,12 @@ n64 = np.arange(200,224).reshape(6,4)
 
 #print(np.random.rand(3,4))   Uniform distribution over [0,1)
 
-nr=np.random.randn(3000,4000) # standrard normal distribution (mean=0, std=1)
-print(nr.min())
-print(nr.max())
-print(nr.mean())
+nr=np.random.randn(30,40) # standrard normal distribution (mean=0, std=1)
+# print(nr.min())
+# print(nr.max())
+# print(nr.mean())
 
+import matplotlib.pyplot as plt
 
+plt.hist(nr.flatten(), bins=50)
+plt.show()
