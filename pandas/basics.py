@@ -188,9 +188,171 @@ df_nan = pd.read_csv(r'D:\PES\PES-MTECH\Data\lds0.csv')
 
 # Replace of Values
 
-df1 = pd.read_csv(r'D:\PES\PES-MTECH\Data\lds1.csv')
+# df1 = pd.read_csv(r'D:\PES\PES-MTECH\Data\lds1.csv')
 
-df1 = df1.Sector.replace({'Pub':'Public','Prvt':'Private'}) # replace values in 'Sector' column
-print(df1)
+# df1 = df1.Sector.replace({'Pub':'Public','Prvt':'Private'}) # replace values in 'Sector' column
+# print(df1)
 
 
+# Plotting of data 
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+df1= pd.read_csv(r'D:\PES\PES-MTECH\Data\lds41.csv')
+print(df1.shape)
+
+# Line Plot 
+
+
+# x1 = np.arange(1,6)
+# y1=x1*2
+# y2 = x1 ** 2
+# plt.plot(x1,y1, label='y=2x', marker='o',linestyle='--',color='red')
+# plt.plot(x1,y2, label='y=x^2', marker='o',linestyle='--',color='blue')
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')    
+# plt.title('Line Plot')
+# print(plt.gcf())
+# plt.legend()
+# plt.xticks(np.linspace(1,5,10))
+# plt.yticks(np.linspace(-6,25,13))
+# plt.show()
+
+# plt.plot(x1,y1,marker="*",linestyle='-',color='green',label='y=2x')
+# plt.text(x=3,y=6,s='Linear Plot', fontsize=15, color='green')
+# for xc,yc in list(zip(x1,y1)):
+#     plt.text(x=xc,y=yc,s=f'({xc},{yc})', fontsize=10, color='red')
+# #plt.show()
+
+# df1.sort_values(by='wt', inplace=True)
+# plt.plot(df1.wt, df1.mpg, marker='o', linestyle='-', color='purple')
+# plt.xlabel('weight')       
+# plt.ylabel('mpg')
+# plt.title('Weight vs MPG')
+# plt.show()
+# print(df1)
+
+print(df1.wt.mean())
+
+# Scatter Plot
+
+
+# x1 = np.arange(1,6)
+# y1 = x1*2 #+ np.random.normal(0,2,size=5)
+# plt.scatter(x1,y1, label='y=2x with noise', marker='o',color='orange')
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.title('Scatter Plot')
+# plt.legend()
+# plt.xticks(np.linspace(1,5,10))
+# plt.yticks(np.linspace(0,12,13))
+# plt.show()
+
+
+# plt.scatter(df1.gear, df1.mpg,  s= df1.cyl*10,c=df1.am+10)
+# plt.xlabel('Gear')
+# plt.ylabel('MPG')   
+# plt.title('Gear vs MPG')
+# #plt.colorbar(label='AM')
+# plt.show()
+
+# Pie Plot
+
+vc = df1.gear.value_counts()
+print(vc)
+# plt.pie(vc, labels=vc.index, autopct='%1.1f%%')
+# plt.title('Distribution of Gears')
+# plt.show()
+
+# vc.plot(kind='pie', autopct='%1.1f%%')
+# plt.title('Distribution of Gears')
+# plt.show()
+
+# vc = df1.carb.value_counts()
+# print(vc)
+# plt.pie(x=vc.values, labels=vc.index, autopct='%1.1f%%')
+# plt.title('Distribution of Carburetors')
+# plt.show()
+
+# Explode wedge
+
+# vc = df1.carb.value_counts()
+# plt.pie(x=vc.values, labels=vc.index, autopct='%1.1f%%',radius=1, explode=[0.1 if i==4 else 0 for i in vc.index])
+# plt.title('Distribution of Carburetors')
+# plt.show()
+
+# Histogram
+
+
+# np.random.seed(23)
+# n100=np.random.randint(low=0,high=101,size=100)
+# plt.xticks(np.linspace(n100.min(), n100.max(), 11))
+# count,bins,patches=plt.hist(n100, bins=10, edgecolor='black',rwidth=0.9,facecolor='cyan',align='mid')
+# colors = plt.cm.tab10(np.arange(len(patches)))  # tab10 colormap
+# for patch, color in zip(patches, colors):
+#     patch.set_facecolor(color)
+# plt.show()
+
+# Bar Chart
+
+# c1count = ['Tata','Birla','Wipro','Infosys','HCL']
+# e1count = [200,100,300,400,250]
+# e2count = [150,80,250,350,200]
+# #plt.bar(c1count,height=e1count)
+# plt.bar(c1count,height=e2count, bottom=e1count, color='orange')
+# plt.show()
+
+# c1count = ['Tata','Birla','Wipro','Infosys','HCL']
+# e1count = [200,100,300,400,250]
+# e2count = [150,80,250,350,200]
+# #plt.bar(c1count,height=e1count)
+# xpos = np.arange(len(c1count))
+# plt.bar(xpos, height=e1count, width=0.4, label='E1', color='blue')
+# plt.bar(xpos+0.4, height=e2count, width=0.4, label='E2', color='orange')
+# plt.xticks(xpos + 0.2, c1count)
+#plt.show()
+
+# plt.bar(x=df1.model, height=df1.mpg, color='grey')
+# #plt.xticks(rotation=90)
+# plt.xlabel('Model') 
+# plt.ylabel('MPG')
+# plt.title('Model vs MPG')
+# plt.xticks(rotation=75)
+# plt.show()
+
+# Box Plot
+
+# v1 = list(range(200,300))
+# v1.append(10)
+# v1.append(20)
+# v1.append(400)
+# #plt.boxplot(x=v1,orientation='horizontal')
+# plt.boxplot([df1.hp,df1.disp])
+# plt.show()
+
+# sns.boxplot(data=df1,x='hp')
+# plt.show()
+
+# df1.mpg.plot(kind='kde')
+# plt.show()
+
+# sns.violinplot(data=df1,x='cyl',y='mpg')
+# plt.show()
+
+# sns.boxenplot(data=df1,x='cyl',y='mpg')
+# plt.show()
+
+
+# x = 10
+# def mf1():
+#     x=x+20
+# mf1()
+
+for i in range(3):
+    for j in range(3):
+        if i==j:
+            break
+        print(i,j)
