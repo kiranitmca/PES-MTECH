@@ -76,23 +76,33 @@ import numpy as np
 sample1 = [10,11,12,13,19,18,23]
 sample2=[20,35,22,11,12,10,23,38,42]
 
-print(stats.ttest_ind(sample1,sample2,alternative="two-sided"))
+# print(stats.ttest_ind(sample1,sample2,alternative="two-sided"))
 
-# two-sided ,greatet,less
+# # two-sided ,greatet,less
 
 
-sample = [9,3,-7,-4,0,-11,1,8,3]
+# sample = [9,3,-7,-4,0,-11,1,8,3]
 
-n= len(sample)
-sample_mean =np.mean(sample)
-std = np.std(sample,ddof=1)
-ts = sample_mean/(std/pow(n,0.5))
-print(ts)
+# n= len(sample)
+# sample_mean =np.mean(sample)
+# std = np.std(sample,ddof=1)
+# ts = sample_mean/(std/pow(n,0.5))
+# print(ts)
 
-print(stats.t.sf(ts,n-1)*100)
+# print(stats.t.sf(ts,n-1)*100)
 
-before =[33,32,38,45,37,47,48,41,45]
-after =[42,35,31,41,37,36,49,49,48]
+# before =[33,32,38,45,37,47,48,41,45]
+# after =[42,35,31,41,37,36,49,49,48]
 
-print(stats.ttest_rel(after,before,alternative="greater"))
+# print(stats.ttest_rel(after,before,alternative="greater"))
 
+# chi_test=stats.chisquare([90,10,40,40],[54,36,54,36])
+# print(chi_test)
+
+chi_test_ind = stats.chisquare([245,354,243],[98,220,140])
+print(chi_test_ind)
+
+# chi_2 = stats.chi2_contingency([[245,98],[354,220],[243,140]])
+# print(chi_2)
+
+# H1 Accepted because p-value is less than 0.05
