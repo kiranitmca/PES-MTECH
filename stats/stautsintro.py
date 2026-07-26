@@ -99,10 +99,14 @@ sample2=[20,35,22,11,12,10,23,38,42]
 # chi_test=stats.chisquare([90,10,40,40],[54,36,54,36])
 # print(chi_test)
 
-chi_test_ind = stats.chisquare([245,354,243],[98,220,140])
-print(chi_test_ind)
+# chi_test_ind = stats.chisquare([245,354,243],[98,220,140])
+# print(chi_test_ind)
 
 # chi_2 = stats.chi2_contingency([[245,98],[354,220],[243,140]])
 # print(chi_2)
 
 # H1 Accepted because p-value is less than 0.05
+
+# ANOVA
+anova=stats.f_oneway([68.7,62.7,55.9,80.7],[75.4,68.5,56.1,70.3],[70.9,63.1,57.3,80.9],[79.1,62.2,59.2,85.4],[78.2,60.3,50.1,82.3])
+print(anova)
